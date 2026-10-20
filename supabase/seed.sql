@@ -1,0 +1,1 @@
+-- Assessment seed data is created by `npm run seed` after `npx supabase db reset`.

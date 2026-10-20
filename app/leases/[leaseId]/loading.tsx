@@ -1,0 +1,1 @@
+export default function Loading(){return <main role="status" aria-live="polite" className="mx-auto max-w-6xl animate-pulse space-y-5 px-5 py-8"><p className="text-sm text-slate-500">Loading lease…</p><div className="h-72 rounded-xl bg-slate-200"/><div className="h-52 rounded-xl bg-slate-200"/></main>}

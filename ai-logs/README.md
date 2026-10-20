@@ -1,3 +1,20 @@
-# AI session export
+# AI Usage Logs — Rent Collection
 
-The assessment requires the transcript of every AI session. Export this Codex conversation from the Codex app and place the resulting transcript in this folder before submitting. This repository file is only a reminder; it is not a substitute for the full transcript.
+## Purpose
+
+This folder documents AI-assisted development work and engineering decisions for the Rent Collection project.
+
+**Record type:** Retrospective summary prepared after implementation.  
+**Important:** This is not an original Codex transcript and does not claim to reproduce exact prompts, responses, timestamps, or tool actions. Use original exported conversation logs separately if they are available.
+
+## Files
+
+- `retrospective-summary.md` — architecture and engineering topics discussed.
+- `verification-notes.md` — a checklist for recording tests and results actually observed.
+
+## Accuracy policy
+
+- Distinguish verified implementation details from assumptions and follow-up checks.
+- Do not report a test as passing unless it was run and its result was observed.
+- Do not include secrets, access tokens, passwords, or private keys.
+- Update this documentation if the implementation changes.

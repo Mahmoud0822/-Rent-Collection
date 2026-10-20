@@ -13,3 +13,7 @@ The first seed draft used a default import from `@next/env`. Running `npm run se
 ## Build bundler and generated files
 
 The first Next build attempt hit a Turbopack worker failure and stale generated output in `.next`. I removed only the workspace `.next` output after confirming no build process was running, then used `next build --webpack`. The production build completed.
+
+## Dashboard report query correction
+
+During a signed-in dashboard smoke check, the monthly collections query failed in PostgreSQL at the selected month alias. The query was changed to use the explicit `month_key` alias. A production build and an authenticated manager dashboard request then succeeded. This records the observed correction; it is not a transcript of the exact prompt or tool sequence.

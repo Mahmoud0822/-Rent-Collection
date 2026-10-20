@@ -9,6 +9,7 @@ This folder documents AI-assisted development work and engineering decisions for
 
 ## Files
 
+- `session-notes.md` — sanitized notes about implementation corrections; not a full transcript.
 - `retrospective-summary.md` — architecture and engineering topics discussed.
 - `verification-notes.md` — a checklist for recording tests and results actually observed.
 

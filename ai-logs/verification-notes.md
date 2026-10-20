@@ -75,3 +75,18 @@
 - Not tested:
 - Known limitations:
 - Follow-up work:
+
+## Observed checks (2026-10-20)
+
+These checks were run in the `assiment` workspace against the same implementation; this note is a concise record, not a substitute for command logs or an exported conversation transcript.
+
+- `npm run build` — passed after the dashboard month alias correction.
+- `npm run lint` (`tsc --noEmit`) — passed.
+- `npx prisma validate` — passed with the local environment variables loaded.
+- Local Supabase — API, database, Studio, and Mailpit ports were listening; seeded records were present. A read-only summary reported 2 organizations, 5 leases, 39 invoices, and 3 approved payments (2 cash, 1 bank transfer).
+- Billing helper smoke check — passed for Jan 31 to leap-year February anchoring, half-up proration (5,173 sen), parsing RM 1,234.56 to 123,456 sen, and the MYT overdue boundary at 16:00 UTC.
+- Authenticated requests — manager and staff report requests returned 200; tenant report request returned 403. Manager and tenant dashboards rendered. Invalid lease input reached manager validation (400), while staff and tenant lease creation attempts returned 403. Tenant payment submission returned 403. An unsigned webhook returned 401.
+
+### Not exercised in these checks
+
+Bank-slip upload and retrieval; payment approval, rejection, and void flows; lease-overlap rejection; signed successful or failed gateway settlement; duplicate or simultaneous callbacks; out-of-order callbacks; direct Supabase Data API RLS behavior; and automated unit/integration test suites. These remain unverified here and must not be represented as passing tests.
